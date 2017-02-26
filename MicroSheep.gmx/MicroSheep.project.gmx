@@ -6,21 +6,34 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_cover</sound>
+    <sound>sound\snd_grass_walk</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_sheep_main_still</sprite>
     <sprite>sprites\sp_sheep_main_walk</sprite>
+    <sprite>sprites\sp_sheep_1</sprite>
+    <sprite>sprites\sp_microsheep</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_cover</background>
     <background>background\bg_instructions</background>
     <background>background\bg_grass_plains</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\pth_microsheep</path>
+  </paths>
+  <fonts name="fonts">
+    <font>fonts\fnt_continue</font>
+    <font>fonts\fnt_text</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_sheep_main</object>
     <object>objects\obj_cmd_cover</object>
     <object>objects\obj_cmd_instructions</object>
+    <object>objects\obj_cmd_main</object>
+    <object>objects\obj_microsheep</object>
+    <object>objects\obj_sheep_other</object>
+    <object>objects\obj_sheep_1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_cover</room>
