@@ -52,15 +52,15 @@
   </views>
   <instances>
     <instance objName="obj_sheep_main" x="128" y="432" name="inst_9343A46C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sheep_1" x="1024" y="416" name="inst_A14E57C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_cmd_main" x="0" y="0" name="inst_EF49C4EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sheep_2" x="2048" y="448" name="inst_35151E1C" locked="0" code="" scaleX="0.300000011920929" scaleY="0.300000011920929" colour="4294967295" rotation="0"/>
-    <instance objName="obj_sheep_3" x="3072" y="432" name="inst_F379CC7E" locked="0" code="" scaleX="0.400000005960464" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_sheep_4" x="4096" y="432" name="inst_C6F01A2F" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_sheep_5" x="5120" y="416" name="inst_3539FAB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_sheep_6" x="6144" y="400" name="inst_DA3A6FA4" locked="0" code="" scaleX="0.400000005960464" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
     <instance objName="obj_sheep_7" x="7168" y="432" name="inst_A5FE2B21" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
     <instance objName="obj_sheep_8" x="8192" y="432" name="inst_5D392C7E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sheep_1" x="1024" y="464" name="inst_62A2FD06" locked="0" code="" scaleX="0.25" scaleY="0.25" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sheep_3" x="2048" y="432" name="inst_54C4F340" locked="0" code="" scaleX="0.400000005960464" scaleY="0.400000005960464" colour="4294967295" rotation="0"/>
+    <instance objName="obj_sheep_2" x="3072" y="416" name="inst_5AC758DE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
