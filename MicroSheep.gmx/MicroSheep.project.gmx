@@ -35,6 +35,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_continue</font>
     <font>fonts\fnt_text</font>
+    <font>fonts\fnt_text_italics</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_sheep_main</object>

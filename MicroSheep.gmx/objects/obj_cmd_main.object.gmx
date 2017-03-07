@@ -131,6 +131,30 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -145,15 +169,81 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>dialogue[0] = "";
-dialogue[1] = "Your wallet remains untouched."
-dialogue[2] = "Brian: Hello fellow sheep!";
-dialogue[3] = "/1";
-dialogue[4] = "1) You: Hi Brian!";
-dialogue[5] = "2) You: Hi Brain.";
-dialogue[6] = "Microsheep: That was mean! You misspelled Brian's name!";
-dialogue[7] = "Brian: Farewell!";
-dialogue[8] = "~";
+            <string>dialogue[0] = '';
+dialogue[1] = 'Your wallet remains untouched.'
+
+dialogue[2] = '/2';
+dialogue[3] = '1) "You seem a little blue - I bet you would look prettier with a smile!"';
+dialogue[4] = '2) "How is it going?"';
+dialogue[5] = 'Microsheep: "This sheep might not like you to point out their color;'; 
+dialogue[6] = 'please try to avoid pathologizing cultural values in future';
+dialogue[7] = 'conversations!"';
+dialogue[8] = 'Response: "Good, thanks for asking! See you around!"';
+dialogue[9] = '~';
+
+dialogue[10] = '/2';
+dialogue[11] = '1) "Where are you from, I have never seen fur like that!"';
+dialogue[12] = '2) "I love your fur!"';
+dialogue[13] = 'Microsheep: "This is a racial microaggression - by asking someone ';
+dialogue[14] = 'where they are from, you are sending the message that they are an ';
+dialogue[15] = 'alien in their own land."';
+dialogue[16] = 'Response: "Thanks! I love your fur too!" ';
+dialogue[17] = '~';
+
+dialogue[18] = '/1';
+dialogue[19] = '1) "Your pink fur is wonderful!"';
+dialogue[20] = '2) "You are a woman, right?"';
+dialogue[21] = 'Microsheep: "Oops! This is an LGBTQ+ microaggression. For future ';
+dialogue[22] = 'conversations, you should never assume someone`s gender or sex!"';
+dialogue[23] = '';
+dialogue[24] = 'Response: "Thank you!"';
+dialogue[25] = '~';
+
+dialogue[26] = '/2';
+dialogue[27] = '1) "You seem like you would drive a Dodge Charger."'
+dialogue[28] = '2) "Let`s go for a walk sometime!"';
+dialogue[29] = 'Microsheep: "Oh no! You just stereotyped this ram (not all rams like ';
+dialogue[30] = 'cars). In the future, make sure to be inclusive of all rams` interests."';
+dialogue[31] = '';
+dialogue[32] = 'Response: "Sure, I would love to!"';
+dialogue[33] = '~';
+
+dialogue[34] = '/1';
+dialogue[35] = '1) "You have wonderful golden fur!"';
+dialogue[36] = '2) "You must own a lot of pasture land."';
+dialogue[37] = 'Microsheep: "That was a baaaaaaad choice of words! You can not ';
+dialogue[38] = 'assume a sheep`s wealth based on fur color. For the future, ';
+dialogue[39] = 'make sure you aren`t assuming wealth based on social identities."';
+dialogue[40] = 'Response: "We sure love talking about our fur!"';
+dialogue[41] = '~';
+
+dialogue[42] = '/2';
+dialogue[43] = '1) "You bleat really well for a cow!"';
+dialogue[44] = '2) "You have lovely spots!"';
+dialogue[45] = 'Microsheep: "Uh oh! You just mistook a sheep for cow. For future ';
+dialogue[46] = 'reference, try to avoid making assumptions based on appearance."';
+dialogue[47] = '';
+dialogue[48] = '*You receive a sheepish grin*';
+dialogue[49] = '~';
+
+dialogue[50] = '/2';
+dialogue[51] = '1) "What are you doing over here in this pasture?"';
+dialogue[52] = '2) "How are you enjoying your meal?"';
+dialogue[53] = 'Microsheep: "This is a racial microaggression - you are sending the ';
+dialogue[54] = 'message that this sheep is an alien in their own land."';
+dialogue[55] = '';
+dialogue[56] = 'Response: "Homegrown grass sure tastes great"';
+dialogue[57] = '~';
+
+dialogue[58] = '/1';
+dialogue[59] = '1) I got to meet so many of my friends today!';
+dialogue[60] = '2) Ewe, I`m not looking so grey-t today!';
+dialogue[61] = 'Microsheep: "Oh no! You should avoid microaggressions against ';
+dialogue[62] = 'yourself even if you feel used to them!"';
+dialogue[63] = '';
+dialogue[64] = 'What a great start to the day! I feel magnificent!';
+dialogue[65] = '~';
+
 </string>
           </argument>
         </arguments>
@@ -178,7 +268,7 @@ dialogue[8] = "~";
             <kind>1</kind>
             <string>if ('/' == string_char_at(dialogue[global.dialogue_index], 0))
 {
-    choice_stage = 1;
+    stage = 1;
     answer = real(string_digits(dialogue[global.dialogue_index]));
 }
 else if ('~' == string_char_at(dialogue[global.dialogue_index], 0))
@@ -186,11 +276,6 @@ else if ('~' == string_char_at(dialogue[global.dialogue_index], 0))
     global.dialogue_index = 0;
     global.progress++;
     global.pause = 0;
-    choice_stage = 0;
-}
-else
-{
-    choice_stage = 0;
 }
 </string>
           </argument>
@@ -436,6 +521,64 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.dialogue_index == 58 || global.dialogue_index == 64</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>fnt_text_italics</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>526</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -494,7 +637,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>choice_stage</string>
+            <string>stage</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -547,6 +690,48 @@ else
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -617,6 +802,146 @@ else
             <string>512 + 55</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>613</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>dialogue[global.dialogue_index]</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>5</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>512 + 5</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>613</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>dialogue[global.dialogue_index + 1]</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>5</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>512 + 55</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>613</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>dialogue[global.dialogue_index + 2]</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>5</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>512 + 105</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -714,7 +1039,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>choice_stage</string>
+            <string>stage</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -996,6 +1321,30 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>424</id>
         <kind>2</kind>
         <userelative>0</userelative>
@@ -1050,7 +1399,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>choice_stage</string>
+            <string>stage</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1106,6 +1455,20 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -1124,9 +1487,47 @@ else
           </argument>
           <argument>
             <kind>0</kind>
-            <string>4</string>
+            <string>6</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -1177,6 +1578,30 @@ else
           <argument>
             <kind>0</kind>
             <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -1278,7 +1703,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>choice_stage</string>
+            <string>stage</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1334,6 +1759,20 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -1352,9 +1791,47 @@ else
           </argument>
           <argument>
             <kind>0</kind>
-            <string>4</string>
+            <string>6</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -1405,6 +1882,30 @@ else
           <argument>
             <kind>0</kind>
             <string>3</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>2</string>
           </argument>
         </arguments>
       </action>
@@ -1548,7 +2049,7 @@ else
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>choice_stage</string>
+            <string>stage</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1736,6 +2237,20 @@ else
       </action>
       <action>
         <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>611</id>
         <kind>6</kind>
         <userelative>-1</userelative>
@@ -1757,6 +2272,44 @@ else
             <string>1</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>stage</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
