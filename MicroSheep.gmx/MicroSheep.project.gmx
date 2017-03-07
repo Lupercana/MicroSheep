@@ -12,6 +12,13 @@
     <sprite>sprites\sp_sheep_main_still</sprite>
     <sprite>sprites\sp_sheep_main_walk</sprite>
     <sprite>sprites\sp_sheep_1</sprite>
+    <sprite>sprites\sp_sheep_2</sprite>
+    <sprite>sprites\sp_sheep_3</sprite>
+    <sprite>sprites\sp_sheep_4</sprite>
+    <sprite>sprites\sp_sheep_5</sprite>
+    <sprite>sprites\sp_sheep_6</sprite>
+    <sprite>sprites\sp_sheep_7</sprite>
+    <sprite>sprites\sp_sheep_8</sprite>
     <sprite>sprites\sp_microsheep</sprite>
   </sprites>
   <backgrounds name="background">
@@ -34,6 +41,13 @@
     <object>objects\obj_microsheep</object>
     <object>objects\obj_sheep_other</object>
     <object>objects\obj_sheep_1</object>
+    <object>objects\obj_sheep_2</object>
+    <object>objects\obj_sheep_3</object>
+    <object>objects\obj_sheep_4</object>
+    <object>objects\obj_sheep_5</object>
+    <object>objects\obj_sheep_6</object>
+    <object>objects\obj_sheep_7</object>
+    <object>objects\obj_sheep_8</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_cover</room>
