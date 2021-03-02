@@ -1,2 +1,2 @@
 # MicroSheep
-ALA 421 Project by Carly Sharp and Boyang Zhang about microagressions in society
+ALA 421 Project by Carly Sharp and me about microagressions in society
